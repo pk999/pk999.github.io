@@ -1,0 +1,1 @@
+This document highlights my experience across Snowflake, SQL/PLSQL, DBT, and Python, with hands-on delivery of scalable data pipelines in telecom environments (AT&T) and BFSI domains. It showcases my end-to-end involvement in ELT design, performance optimization, cloud data warehousing, and solutioning for enterprise-grade workloads.
