@@ -66,6 +66,8 @@
     }
 p { margin: 6px 0; }
 .tech-skills p { margin: 6px 0; }
+    
+/* Desktop layout */
 .header-flex {
   display: flex;
   align-items: center;
@@ -73,6 +75,27 @@ p { margin: 6px 0; }
   gap: 30px;
   margin-bottom: 30px;
 }
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .header-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-text {
+    align-items: center;
+  }
+
+  .header-text h1 {
+    text-align: center;
+  }
+
+  .profile-pic-side {
+    margin-bottom: 10px;
+  }
+}
+
 .profile-pic-side {
   width: 150px;
   height: 150px;
@@ -182,6 +205,7 @@ p { margin: 6px 0; }
   </div>
 </body>
 </html>
+
 
 
 
