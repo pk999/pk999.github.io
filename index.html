@@ -64,29 +64,26 @@
       color: #666;
       font-size: 14px;
     }
-    .tech-skills p { margin: 6px 0; }
-    .profile-pic {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-      display: block;
-      margin: 0 auto 20px auto;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
+p { margin: 6px 0; }
+.tech-skills p { margin: 6px 0; }
+.header-flex { display: flex; align-items: center; gap: 30px; }
+.profile-pic-side { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+.header-text h1 { margin-top: 0; }
 
   </style>
 </head>
 <body>
   <div class="container">
     <div class="card">
+      <div class="header-flex">
+        <img src="linkedin_pic.jpg" alt="Praneeth D" class="profile-pic">
+        <div class="header-text">
       <h1>Praneeth D</h1>
-      <img src="linkedin_pic.jpg" alt="Praneeth D" class="profile-pic">
-
       <div class="subtitle">Snowflake Developer | Data Engineer | SQL/PLSQL | DBT | Python | Telecom & BFSI Domains</div>
-
       <a class="button" href="PraneethK_Snowflake_Data_Engineer.pdf" download>Download Resume (PDF)</a>
-
+      </div>
+    </div>
+      href="PraneethK_Snowflake_Data_Engineer.pdf" download>Download Resume (PDF)</a>
       <h2>Profile Summary</h2>
       <p>
         Data Engineer with 8+ years of strong SQL/PLSQL experience and 4+ years specialising in Snowflake. Skilled in ELT pipeline design, performance optimisation, DBT transformations, Python automation, and telecom domain data platforms (AT&T). Currently expanding into MLOps including Docker, DVC, and MLflow.
@@ -165,6 +162,7 @@
   </div>
 </body>
 </html>
+
 
 
 
