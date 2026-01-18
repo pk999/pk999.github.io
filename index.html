@@ -146,9 +146,9 @@ p { margin: 6px 0; }
            font-size: 14px;
            color: #555;
          ">
-           <span id="humanLabel">👤 Curious Humans</span>:
-           <b><span id="humanCount">–</span></b>
+           Curious humans: <b><span id="humanCount">–</span></b>
          </div>
+
       </div>
     </div>
       
@@ -227,34 +227,35 @@ p { margin: 6px 0; }
     </div>
 
 <div class="footer">
-  © 2026 Praneeth D <br>
-  <span id="humanLabel">Curious Humans</span>:
-  <img
-    src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://pk999.github.io&count_bg=%23E8EEF9&title_bg=%23555555&icon=github.svg&edge_flat=false"
-    alt="curious humans counter"
-  />
+  © 2026 Praneeth D
 </div>
-
 
   </div>
 <script>
-  const labels = [
-    "👤 Curious Humans",
-    "👀 Visiting Today",
-    "🌍 Total Humans"
-  ];
+  window.addEventListener("load", () => {
+    const namespace = "praneethd-github";
+    const key = "visits";
+    const countEl = document.getElementById("humanCount");
 
-  let index = 0;
-  const labelElement = document.getElementById("humanLabel");
+    // 1️⃣ Get current count
+    fetch(`https://api.countapi.xyz/get/${namespace}/${key}`)
+      .then(res => res.json())
+      .then(data => {
+        countEl.textContent = data.value !== undefined ? data.value : 0;
+      })
+      .catch(() => {
+        countEl.textContent = "—";
+      });
 
-  setInterval(() => {
-    index = (index + 1) % labels.length;
-    labelElement.textContent = labels[index];
-  }, 3000);
+    // 2️⃣ Increment count (async, non-blocking)
+    fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`).catch(() => {});
+  });
 </script>
+
 
 </body>
 </html>
+
 
 
 
