@@ -141,13 +141,14 @@ p { margin: 6px 0; }
            Snowflake Developer | Data Engineer | SQL/PLSQL | DBT | Python | Telecom & BFSI Domains
          </div>
          <a class="button" href="PraneethK_Snowflake_Data_Engineer.pdf" download>Download Resume (PDF)</a>
-         <div style="margin-top: 6px;">
-           <img
-             src="https://visitorbadge.io/api/visitors?path=pk999.github.io&label=Viewed%20by%20Professionals&countColor=%231a73e8"
-             alt="Viewed by Professionals"
-             style="height: 22px;"
-           />
-         </div>
+<p id="viewCounter" style="
+  margin-top: 6px;
+  font-size: 14px;
+  color: #666;
+">
+  Viewed by professionals: —
+</p>
+
 
       </div>
     </div>
@@ -231,9 +232,23 @@ p { margin: 6px 0; }
 </div>
 
   </div>
+<script>
+  const counterKey = "resumePageViews";
+
+  let views = localStorage.getItem(counterKey);
+  views = views ? parseInt(views, 10) + 1 : 1;
+
+  localStorage.setItem(counterKey, views);
+
+  const counterEl = document.getElementById("viewCounter");
+  if (counterEl) {
+    counterEl.textContent = `Viewed by professionals: ${views}`;
+  }
+</script>
 
 </body>
 </html>
+
 
 
 
