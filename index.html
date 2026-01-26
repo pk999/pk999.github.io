@@ -150,6 +150,29 @@ p { margin: 6px 0; }
     height: 40px;
     display: block;
   }
+  
+<style>
+  .linkedin-float {
+    position: fixed;
+    bottom: 90px; /* above WhatsApp */
+    right: 24px;
+    z-index: 9999;
+    background-color: #0A66C2;
+    border-radius: 50%;
+    padding: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease;
+  }
+
+  .linkedin-float:hover {
+    transform: scale(1.1);
+  }
+
+  .linkedin-float img {
+    width: 40px;
+    height: 40px;
+    display: block;
+  }
 </style>
 
 </head>
@@ -282,8 +305,23 @@ p { margin: 6px 0; }
   />
 </a>
 
+<a
+  href="https://www.linkedin.com/in/praneeth-darji/"
+  class="linkedin-float"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Message on LinkedIn"
+>
+  <img
+    src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+    alt="LinkedIn"
+  />
+</a>
+
+  
 </body>
 </html>
+
 
 
 
