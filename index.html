@@ -154,12 +154,15 @@ p { margin: 6px 0; }
 <style>
   .linkedin-float {
     position: fixed;
-    bottom: 90px; /* above WhatsApp */
-    right: 24px;
+    bottom: 90px;
+    right: 24px;          /* FORCE right side */
+    left: auto;           /* OVERRIDE any left rules */
     z-index: 9999;
+
     background-color: #0A66C2;
     border-radius: 50%;
     padding: 12px;
+
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     transition: transform 0.2s ease;
   }
@@ -174,6 +177,7 @@ p { margin: 6px 0; }
     display: block;
   }
 </style>
+
 
 </head>
 <body>
@@ -321,23 +325,3 @@ p { margin: 6px 0; }
   
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
